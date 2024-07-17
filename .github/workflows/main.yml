@@ -42,9 +42,9 @@ jobs:
           tags: |
             rafasilva320/go.devops.api:${{ steps.generate_sha.outputs.sha }}
             rafasilva320/go.devops.api:latest
-            - name: Update image helm
-            uses: fjogeleit/yaml-update-action@main
-            with:
+      - name: Update image helm
+        uses: fjogeleit/yaml-update-action@main
+        with:
               branch: release
               targetBranch: main
               createPR: true
